@@ -28,4 +28,7 @@ void write(T message, std::string colorCode = DEFAULT)
 void print(std::string, std::string);
 void write(std::string, std::string);
 
+std::string to_String(int variable);
+std::string to_String(unsigned int variable);
+
 #endif
