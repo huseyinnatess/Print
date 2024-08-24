@@ -37,6 +37,7 @@ print("Bu kırmızı bir yazı!", RED);
 print("Bu yeşil bir yazı!", GREEN);
 print("Bu sarı bir yazı!", YELLOW);
 print("Bu mavi bir yazı!", BLUE);
+```
 
 ### Write Fonksiyonunu Kullanma
 
@@ -45,6 +46,7 @@ Yeni satıra geçmeden yazdırmak isterseniz `write` fonksiyonunu kullanabilirsi
 ```cpp
 write("Bu yazı yeni satıra geçmeyecek. ");
 write("Bu aynı satırda.");
+```
 
 ## Örnek
 
@@ -68,3 +70,4 @@ int main() {
     
     return 0;
 }
+```
