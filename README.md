@@ -61,7 +61,7 @@ int main() {
     
     int puan = 100;
     // Sarı renkte puan mesajı
-    print("Puanınız: ", puan, YELLOW);
+    print("Puanınız: " + puan, YELLOW);
     
     // Yeni satıra geçmeden yazdırma
     write("Yükleniyor...");
