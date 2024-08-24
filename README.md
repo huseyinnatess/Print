@@ -11,10 +11,10 @@ Bu C++ kütüphanesi, çeşitli veri tiplerini konsola yazdırmak için basit ve
 
 ## Kurulum
 
-Projenize `print.hpp` başlık dosyasını dahil edin:
+Projenize `Print.hpp` başlık dosyasını dahil edin:
 
 ```cpp
-#include "print.hpp"
+#include "Print.hpp"
 ```
 
 ## Kullanım
@@ -53,7 +53,7 @@ write("Bu aynı satırda.");
 Kütüphaneyi basit bir programda nasıl kullanabileceğinizi gösteren bir örnek:
 
 ```cpp
-#include "print.hpp"
+#include "Print.hpp"
 
 int main() {
     // Yeşil renkte hoş geldiniz mesajı
