@@ -13,22 +13,24 @@
 
 #include <iostream>
 
+#define string std::string
+
 template <class T>
-void print(T message, std::string colorCode = DEFAULT)
+void print(T message, string colorCode = DEFAULT)
 {
     std::cout << colorCode << message << std::endl;
 }
 
 template <class T>
-void write(T message, std::string colorCode = DEFAULT)
+void write(T message, string colorCode = DEFAULT)
 {
     std::cout << colorCode << message;
 }
 
-void print(std::string, std::string);
-void write(std::string, std::string);
+void print(string, string);
+void write(string, string);
 
-std::string to_String(int variable);
-std::string to_String(unsigned int variable);
+string to_String(int variable);
+string to_String(unsigned int variable);
 
 #endif

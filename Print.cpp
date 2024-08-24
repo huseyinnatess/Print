@@ -1,18 +1,18 @@
 #include "Print.hpp"
 
-void print(std::string message, std::string colorCode = DEFAULT)
+void print(string message, string colorCode = DEFAULT)
 {
     std::cout << colorCode << message << std::endl;
 }
 
-void write(std::string message, std::string colorCode = DEFAULT)
+void write(string message, string colorCode = DEFAULT)
 {
     std::cout << colorCode << message;
 }
 
-std::string to_String(int variable)
+string to_String(int variable)
 {
-    std::string result;
+    string result;
     bool isNegative = false;
 
     if (variable < 0) 
@@ -34,9 +34,9 @@ std::string to_String(int variable)
     return result;
 }
 
-std::string to_String(unsigned int variable)
+string to_String(unsigned int variable)
 {
-    std::string result;
+    string result;
 
    if (variable == 0) {
         result = "0";
