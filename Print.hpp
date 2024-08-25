@@ -30,7 +30,9 @@ void write(T message, string colorCode = DEFAULT)
 void print(string, string);
 void write(string, string);
 
-string to_String(int variable);
-string to_String(unsigned int variable);
+string ConvertToString(const int variable);
+string ConvertToString(const unsigned int variable);
+
+int ConvertToInt(const string variable);
 
 #endif

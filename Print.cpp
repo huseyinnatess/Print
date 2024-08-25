@@ -10,42 +10,82 @@ void write(string message, string colorCode = DEFAULT)
     std::cout << colorCode << message;
 }
 
-string to_String(int variable)
+string ConvertToString(const int variable)
 {
     string result;
-    bool isNegative = false;
 
-    if (variable < 0) 
+    int temp = variable;
+
+    try
     {
-        isNegative = true;
-        variable = -variable;
+        if (temp < 0) 
+        {
+        result = "-";
+        temp = -temp;
+        }
+
+        do {
+            char digit = '0' + temp % 10;
+            result = digit + result;
+            temp /= 10;
+        } while (temp != 0);
     }
-
-    do {
-        char digit = '0' + variable % 10;
-        result = digit + result;
-        variable /= 10;
-    } while (variable != 0);
-
-    if (isNegative) {
-        result = '-' + result;
+    catch (...)
+    {
+        print("ConvertToString: Error while converting int to string", RED);
+        throw;
     }
-
     return result;
 }
 
-string to_String(unsigned int variable)
+string ConvertToString(const unsigned int variable)
 {
     string result;
 
-   if (variable == 0) {
-        result = "0";
-    } else {
-        while (variable != 0) {
-            char digit = '0' + (variable % 10);
-            result = digit + result;
-            variable /= 10;
-        }
+    unsigned int temp = variable;
+
+    try
+    {
+        do {
+        char digit = '0' + temp % 10;
+        result = digit + result;
+        temp /= 10;
+        }  while (temp != 0);
     }
+    catch (...)
+    {
+        print("ConvertToString: Error while converting int to string", RED);
+        throw;
+    }
+    return result;
+}
+
+int ConvertToInt(const string variable)
+{
+    int result = 0;
+    int i = 0;
+    bool isNegative = false;
+
+    try {
+        if (variable[0] == '-') {
+            isNegative = true;
+            i++;
+        }
+
+        while (variable[i] != '\0') {
+            result = result * 10 + variable[i] - '0';
+            i++;
+        }
+
+        if (isNegative) {
+            result = -result;
+        }
+    } 
+    catch (...) 
+    {
+        print("ConvertToInt: Error while converting string to int", RED);
+        throw;
+    }
+
     return result;
 }
