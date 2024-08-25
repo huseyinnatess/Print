@@ -22,12 +22,20 @@ void print(T message, string colorCode = DEFAULT)
 }
 
 template <class T>
+void printError(T message, string colorCode = DEFAULT)
+{
+    std::cerr << colorCode << message << std::endl;
+}
+
+template <class T>
 void write(T message, string colorCode = DEFAULT)
 {
     std::cout << colorCode << message;
 }
 
 void print(string, string);
+void printError(string, string);
+
 void write(string, string);
 
 string ConvertToString(const int variable);

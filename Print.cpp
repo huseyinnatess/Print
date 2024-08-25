@@ -5,6 +5,11 @@ void print(string message, string colorCode = DEFAULT)
     std::cout << colorCode << message << std::endl;
 }
 
+void printError(string message, string colorCode = DEFAULT)
+{
+    std::cerr << colorCode << message << std::endl;
+}
+
 void write(string message, string colorCode = DEFAULT)
 {
     std::cout << colorCode << message;
@@ -18,7 +23,7 @@ string ConvertToString(const int variable)
 
     try
     {
-        if (temp < 0) 
+        if (temp < 0)
         {
         result = "-";
         temp = -temp;
@@ -80,8 +85,8 @@ int ConvertToInt(const string variable)
         if (isNegative) {
             result = -result;
         }
-    } 
-    catch (...) 
+    }
+    catch (...)
     {
         print("ConvertToInt: Error while converting string to int", RED);
         throw;
