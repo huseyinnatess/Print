@@ -15,25 +15,27 @@
 #include <iostream>
 
 /* ------------- TYPEDEF ------------- */
-#define string std::string
+using std::string;
+using std::cout;
+using std::endl;
 
 /* ------------- TEMPLATE OUTPUT FUNCTIONS ------------- */
 template <class T>
 void print(T message, string colorCode = DEFAULT)
 {
-    std::cout << colorCode << message << std::endl;
+    cout << colorCode << message << endl;
 }
 
 template <class T>
 void printError(T message, string colorCode = DEFAULT)
 {
-    std::cerr << colorCode << message << std::endl;
+    std::cerr << colorCode << message << endl;
 }
 
 template <class T>
 void write(T message, string colorCode = DEFAULT)
 {
-    std::cout << colorCode << message;
+    cout << colorCode << message;
 }
 
 
